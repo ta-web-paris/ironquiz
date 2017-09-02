@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+env:
+  global:
+  # Setting SURGE_LOGIN and SURGE_TOKEN
+  - secure: cWfWxQtmVaDE4QoiIxHM0ZDQaKZ+0l/VIqt89nqXYPSt/PlhO9EabuXYbWHOkUrQNk/fhxSrW3qYgP1Cff0B+udNko47VygyTV9YLfAT3jVXeyrSxZ/Ckp0Rzg2WpGRS8vmsRjJYd7z48M7yHu4BJisH6lqweRPfsOddviNwjrugKUIoAZjh21owqDGpLGPluOEgreA3blmqJBY5aFbnW7jQ/o+wn7EGRapGByNJq8PwmjbgeAT7ZC564Gr5MNq+rrapO0d4kBH/zJWepu9UAdinm2L12sZNkiiRaVHZySD/T+G+bSY5PpB/T2F3nj8OnmV8lmwecdAoxw8ZCaYpsHH74Ws8yynsziBco6h4oUmX2l6jQ3WWFQaYP9Qe7sYzur62gquCij3y6k4/Dx/Nc69POly8ZNY6j4X9eoifbzUoBrTyfCGmN51X1bpt1RVSjqDLDikgma5yl6BIanjTZcBMmENMv4m9SAcTvrPm8xIehhmbPTCflLkILg9eVlPHdiUZLDnFm5AQbc+fS+8QwRHBJz4Ky8FcRoXPGhUlEO98RATqvrJ+6WH5YwlW9X0wAjlUe8zEpBLFfIJstBYsDL70pnowe/XEOwj/Nv+WxdKTvS3V8dYo/n/3alEjdWRq/aPkrr3wi9l6Tnv0lzQ5ni/5+ULc26q66dlIms6noKs=
+install:
+- npm install
+script:
+- npm run build
+deploy:
+  provider: surge
+  project: "./dist"
+  domain: ironquiz.surge.sh
+  skip_cleanup: true
