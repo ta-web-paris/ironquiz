@@ -1,5 +1,15 @@
 module.exports = {
   mode: 'spa',
+  modules: [
+    [
+      '~/modules/firebase',
+      {
+        authDomain: 'ironquiz-for-ironhack.firebaseapp.com',
+        databaseURL: 'https://ironquiz-for-ironhack.firebaseio.com',
+        projectId: 'ironquiz-for-ironhack'
+      }
+    ]
+  ],
   head: {
     title: 'ironquiz',
     meta: [
