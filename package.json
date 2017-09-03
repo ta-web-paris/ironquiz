@@ -12,6 +12,7 @@
     "prettier": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "bulma": "^0.5.1",
     "firebase": "^4.3.0",
     "nuxt": "^1.0.0-rc8",
     "vuefire": "^1.4.3"
@@ -23,9 +24,11 @@
     "eslint-plugin-html": "^3.2.0",
     "eslint-plugin-prettier": "^2.2.0",
     "http-server": "^0.10.0",
+    "node-sass": "^4.5.3",
     "pre-commit": "^1.2.2",
     "prettier": "^1.6.1",
-    "promise-polyfill": "^6.0.2"
+    "promise-polyfill": "^6.0.2",
+    "sass-loader": "^6.0.6"
   },
   "pre-commit": [
     "lint"
